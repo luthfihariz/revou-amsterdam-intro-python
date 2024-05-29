@@ -10,10 +10,10 @@ else:
 
 # Short hand if else
 animal = "dog"
-#print("This is a cat") if animal == "cat" else print("This is not cat")
+print("This is a cat") if animal == "cat" else print("This is not cat")
 
-# animal_sound = "meow" if animal == "cat" else "bark"
-# print(animal_sound)
+animal_sound = "meow" if animal == "cat" else "bark"
+print(animal_sound)
 
 
 animal = "butterfly"
