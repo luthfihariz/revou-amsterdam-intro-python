@@ -33,8 +33,11 @@ Learning Goal: Students will learn the basics of Python syntax and control flow,
 ### Installing Pipenv
 
 Make sure you have python and pip installed in your local
+
 ```python --version```
+
 or 
+
 ```python3 --version```
 
 Additionally, make sure you have pip available. Check this by running:
