@@ -12,6 +12,18 @@ Learning Goal: Students will learn the basics of Python syntax and control flow,
 ### Day 2
 - Functions, builtin functions
 - Lambda functions
-- Decorator
 - Intro to data structure
 - List, tuples, Sets, Dictionaries
+
+
+### Day 3
+- Intro to OOP
+- Classes
+- Inheritance
+- Dunder
+- Methods
+- Polymorphism
+
+
+### Day 4
+- Design Patterns
