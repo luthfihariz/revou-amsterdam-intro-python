@@ -1,8 +1,8 @@
-# Instance methods
 class Person:
-    def __init__(self, name, age):
+    def __init__(self, name, age, ktp_number):
         self.name = name
         self.age = age
+        self.ktp_number = ktp_number
 
     def say_hello(self):
         print(f"Hello, my name is {self.name} and I am {self.age} years old")
@@ -14,34 +14,30 @@ class Person:
     @classmethod
     def from_birth_year(cls, name, birth_year):
         return cls(name, 2024 - birth_year)
-
-    # dunder methods
+    
+    # # dunder methods
+    def __eq__(self, other):
+        return self.ktp_number == other.ktp_number
+    
     def __str__(self):
-        return f"{self.name} is {self.age} years old"
-
-    def __eq__(self, other): # Introduce variable ktp_number
-        return self.name == other.name and self.age == other.age
+        return f"Name is {self.name}. Age is {self.age}. KTP Number is {self.ktp_number}"
+        
 
 
-class PersonUtil:
-    @staticmethod
-    def is_adult(age):
-        return age >= 18
+# class PersonUtil:
+#     @staticmethod
+#     def is_adult(age):
+#         return age >= 18
+    
+#     @staticmethod
+#     def is_asian(race):
+#         pass
 
+# print(PersonUtil.is_adult(jane.age))
+# print(PersonUtil.is_adult(john.age))
 
-# Creating an instance of the class
-john = Person("John", 30)
-john.say_hello()
-john.birthday()
-john.say_hello()
+john = Person("John", 20, "123456")
+john2 = Person("John", 20, "123456")
 
-# Using class method
-jane = Person.from_birth_year("Jane", 2015)
-
-# Using static method
-# Try for jane.is_adult() first to show an error and ask the students to debug
-print(PersonUtil.is_adult(jane.age))
-
-# Using magic methods
 print(john)
-print(john == jane)
+print(john.__eq__(john2))

@@ -1,9 +1,7 @@
-# inheritance
-# base class / parent class
-
-
+# Parent Class
 class Animal:
-    def __init__(self, name):
+    def __init__(self, color, name):
+        self.color = color
         self.name = name
 
     def speak(self):

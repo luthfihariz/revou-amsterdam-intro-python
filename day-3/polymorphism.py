@@ -8,12 +8,29 @@ class Cat:
         return "Meow!"
 
 
-def make_sound(animal):
-    print(animal.sound())
+class Car:
+    def sound(self):
+        return "Broom!"
+
+
+class Person:
+    def speak(self):
+        return "Hey!"
+
+def make_sound(athing):
+    print(athing.sound())
+
+
+def display_price(product):
+    print(f"Rp {product.get_price()}")
 
 
 dog = Dog()
 cat = Cat()
+car = Car()
+person = Person()
 
-make_sound(dog)  # Prints: Woof!
-make_sound(cat)  # Prints: Meow!
+make_sound(dog)
+make_sound(cat)
+make_sound(car)
+#make_sound(person)
